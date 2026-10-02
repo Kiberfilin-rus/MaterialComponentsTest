@@ -13,6 +13,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -44,8 +45,17 @@ private fun Test(innerPadding: PaddingValues) {
             .background(color = MaterialTheme.colorScheme.background)
             .padding(innerPadding)
     ) {
-        Example1()
+        Example2()
     }
+}
+
+@Composable
+fun Example2() {
+    TextField(
+        value = "Value",
+        onValueChange = {},
+        label = {Text(text = "Label")}
+    )
 }
 
 @Composable
